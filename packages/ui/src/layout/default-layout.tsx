@@ -33,17 +33,16 @@ export const DefaultLayout = (props: DefaultLayoutProps) => {
     return (
         <RootLayout>
             <Layout>
-                <Sider width={siderWidth} breakpoint={'lg'} collapsedWidth={0} onBreakpoint={(broken) => {
-                    console.log(broken);
-                }}
-                onCollapse={(collapsed, type) => {
-                    console.log(collapsed, type);
-                }}
+                <Sider width={siderWidth} breakpoint={'lg'} collapsedWidth={0}
+                // onBreakpoint={(broken) => {
+                //     console.log(broken);
+                // }}
+                // onCollapse={(collapsed, type) => {
+                //     console.log(collapsed, type);
+                // }}
                 >
 
-                    <Menu mode={"inline"} theme={"dark"} items={menuItems} onClick={(e: any) => {
-                        console.log(e);
-                    }} />
+                    <Menu mode={"inline"} theme={"dark"} items={menuItems} />
                 </Sider>
                 <Layout>
                     <Header style={{background:"#fff"}}>

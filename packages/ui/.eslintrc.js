@@ -5,6 +5,8 @@ module.exports = {
     "@repo/eslint-config/react-internal.js",
     "plugin:storybook/recommended",
     "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
     "plugin:storybook/recommended"
   ],
   parser: "@typescript-eslint/parser",
