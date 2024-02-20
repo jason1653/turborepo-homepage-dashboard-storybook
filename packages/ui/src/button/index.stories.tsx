@@ -1,9 +1,9 @@
 import { DefaultLayout } from "../layout/default-layout";
-import type { StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { CsButton } from "./index";
 import { ReactNode } from "react";
 
-const meta = {
+const meta: Meta<typeof CsButton> = {
   title: "컴포넌트/버튼",
   component: CsButton,
   tags: ["autodocs"],
@@ -35,10 +35,10 @@ const meta = {
       console.log("버튼 클릭");
     },
   },
-} as any;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof CsButton>;
 
 export const 기본_Primary: Story = {
   args: {

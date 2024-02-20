@@ -25,11 +25,11 @@ pnpm run build
 
 ### 스토리북 작성 예시
 파일명 규칙: *.stories.ts
-```jsx
-const meta = {
+```tsx
+const meta: Meta<typeof 컴포넌트> = {
     title: '제목', //스토리북 좌측메뉴에 컴포넌트 노출
     component: 컴포넌트, 
-    tags: ["autodoc"], //docs 추가
+    tags: ["autodocs"], //docs 추가
     argsType: {
         //컴포넌트의 props에 대한 설정
         //https://storybook.js.org/docs/react/essentials/controls
@@ -40,15 +40,15 @@ const meta = {
                 options: ["value 값", "value 값", "value 값"] //컨트롤 값
             },
         }
-    }
+    },
     args: {
         //컴포넌트의 props에 대한 초기값 설정
         props값: "value 값"
     }
-} as any;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof 컴포넌트>;
 
 
 //노출할 컴포넌트
