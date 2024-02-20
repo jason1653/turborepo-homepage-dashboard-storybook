@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
-import { Button } from "antd";
+import { Button, ConfigProvider } from "antd";
 import type { ButtonType } from "antd/es/button/buttonHelpers";
+import theme from "../theme/themeConfig";
 
 export interface CsButtonProps {
   type?: ButtonType;
@@ -14,9 +15,11 @@ export const CsButton = (props: CsButtonProps) => {
 
   return (
     <>
-      <Button type={type} danger={danger} loading={loading} onClick={onClick}>
-        {children}
-      </Button>
+      <ConfigProvider theme={theme}>
+        <Button type={type} danger={danger} loading={loading} onClick={onClick}>
+          {children}
+        </Button>
+      </ConfigProvider>
     </>
   );
 };

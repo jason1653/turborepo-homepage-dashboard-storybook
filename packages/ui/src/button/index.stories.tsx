@@ -4,7 +4,7 @@ import { CsButton } from "./index";
 import { ReactNode } from "react";
 
 const meta: Meta<typeof CsButton> = {
-  title: "컴포넌트/버튼",
+  title: "Components/버튼",
   component: CsButton,
   tags: ["autodocs"],
 
