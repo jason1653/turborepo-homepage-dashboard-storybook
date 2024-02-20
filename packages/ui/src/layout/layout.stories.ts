@@ -8,6 +8,17 @@ const meta = {
     title: 'Layout/레이아웃',
     component: DefaultLayout,
     tags: ['autodocs'],
+    argTypes: {
+        children: {
+            control: { type: 'text' }
+        },
+        siderWidth: {
+            control: { type: 'number' }
+        },
+        menuItems: {
+            control: { type: 'object' }
+        },
+    },
 } as any;
 
 
@@ -52,3 +63,4 @@ export const 기본레이아웃: Story = {
         menuItems: items,
     },
 }
+
