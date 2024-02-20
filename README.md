@@ -1,5 +1,7 @@
 # Turborepo Ant Design 
 
+AntDesign을 활용한 AdminDashboard 및 홈페이지 공용컴포넌트 스터디
+
 apps 구동
 ```bash
 pnpm run dev --filter docs
