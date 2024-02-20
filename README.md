@@ -24,6 +24,7 @@ pnpm run build
 
 
 ### 스토리북 작성 예시
+파일명 규칙: *.stories.ts
 ```jsx
 const meta = {
     title: '제목', //스토리북 좌측메뉴에 컴포넌트 노출
