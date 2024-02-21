@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -43,7 +44,7 @@ const Nav = styled.div`
   align-items: center;
 `;
 
-const NavItem = styled.a`
+const NavItem = styled(Link)`
   display: block;
   font-size: 24px;
   font-weight: 700;
@@ -82,10 +83,10 @@ const Header = () => {
         </HeaderLogo>
         <HeaderMenu>
           <Nav>
-            <NavItem>Home</NavItem>
-            <NavItem>About Us</NavItem>
-            <NavItem>Service</NavItem>
-            <NavItem>Contact</NavItem>
+            <NavItem href={"/"}>Home</NavItem>
+            <NavItem href={"/about"}>About Us</NavItem>
+            <NavItem href={"/about"}>Service</NavItem>
+            <NavItem href={"/about"}>Contact</NavItem>
 
             <MobileMenuIcon
               src={"/btn_menu.png"}

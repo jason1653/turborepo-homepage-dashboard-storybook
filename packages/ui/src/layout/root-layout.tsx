@@ -9,6 +9,7 @@ import {
 import { RecoilRoot } from "recoil";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
+import MotionWrapper from "../animation/page-motion-wrapper";
 
 export interface RootLayoutProps {
   children: ReactNode;
@@ -25,14 +26,14 @@ export const RootLayout = (props: RootLayoutProps) => {
   }, []);
 
   return (
-    <>
+    <MotionWrapper>
       <RecoilRoot>
         <QueryClientProvider client={queryClient}>
           <AntdRegistry>
-            <>{children}</>
+            {!isLoading ? <>로딩</> : <>{children}</>}
           </AntdRegistry>
         </QueryClientProvider>
       </RecoilRoot>
-    </>
+    </MotionWrapper>
   );
 };
