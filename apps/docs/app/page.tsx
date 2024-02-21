@@ -51,5 +51,5 @@ const LINKS = [
 ];
 
 export default function Page(): JSX.Element {
-  return <HomeLayout>123123</HomeLayout>;
+  return <DefaultLayout>123123</DefaultLayout>;
 }

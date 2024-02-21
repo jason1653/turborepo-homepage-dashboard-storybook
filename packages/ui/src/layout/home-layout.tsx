@@ -118,8 +118,8 @@ const items: MenuProps["items"] = [
   },
 ];
 
-import logo from "../assets/logo.png";
-import logoFooter from "../assets/logo_footer.png";
+import logo from "../../../../apps/home/public/logo.png";
+import logoFooter from "../../../../apps/home/public/logo_footer.png";
 
 export const HomeLayout = (props: HomeLayoutProps) => {
   const { children } = props;

@@ -29,14 +29,7 @@ export const RootLayout = (props: RootLayoutProps) => {
       <RecoilRoot>
         <QueryClientProvider client={queryClient}>
           <AntdRegistry>
-            {!isLoading ? (
-              <div>
-                로딩
-                <Spin fullscreen size={"large"} />
-              </div>
-            ) : (
-              <>{children}</>
-            )}
+            <>{children}</>
           </AntdRegistry>
         </QueryClientProvider>
       </RecoilRoot>
