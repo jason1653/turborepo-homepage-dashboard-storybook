@@ -49,14 +49,14 @@ const NavItem = styled.a`
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  padding: 0 15px;
+  padding: 0 0px 0px 30px;
 
   @media (max-width: 768px) {
     display: none;
   }
 
-  &:last-child {
-    padding-right: 0;
+  :last-child {
+    padding-right: 0 !important;
   }
 `;
 
