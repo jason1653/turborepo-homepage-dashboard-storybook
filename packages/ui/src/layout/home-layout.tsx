@@ -1,7 +1,9 @@
 import React, { ReactNode } from "react";
 import { Col, Layout, Menu, MenuProps, Row } from "antd";
-import { Content, Header } from "antd/es/layout/layout";
+import { Content, Footer, Header } from "antd/es/layout/layout";
 import styled from "styled-components";
+
+const maxWidth = 1200;
 
 export interface HomeLayoutProps {
   children: ReactNode;
@@ -12,14 +14,16 @@ const HeaderStyled = styled(Header)`
   background: #000;
 `;
 
-const HeaderContentStyled = styled(Content)`
-  max-width: 1200px;
+const HeaderContentStyled = styled.div`
+  max-width: ${maxWidth}px;
   margin: 0 auto;
 `;
 
 const LogoStyled = styled(Col)`
   text-align: left;
   color: #fff;
+  align-items: center;
+  display: flex;
 `;
 
 const MenuContainer = styled.div`
@@ -44,13 +48,21 @@ const MenuItemsStyled = styled(Menu)`
 const ContentsStyled = styled(Content)`
   background-color: #000;
   color: #fff;
+  padding: 0 50px;
 `;
 
 const ContentStyledDiv = styled.div`
   margin: 0 auto;
-  max-width: 1200px;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  max-width: ${maxWidth}px;
+  padding: 20px 0;
+`;
+
+const FooterContainer = styled(Footer)``;
+
+const FooterContainerDiv = styled.div`
+  max-width: ${maxWidth}px;
+  text-align: left;
+  margin: 0 auto;
 `;
 
 const items: MenuProps["items"] = [
@@ -77,7 +89,7 @@ export const HomeLayout = (props: HomeLayoutProps) => {
   return (
     <>
       <Layout>
-        <ContentsStyled>
+        <HeaderStyled>
           <HeaderContentStyled>
             <Row>
               <LogoStyled span={12}>Logo</LogoStyled>
@@ -91,10 +103,13 @@ export const HomeLayout = (props: HomeLayoutProps) => {
               </MenuStyled>
             </Row>
           </HeaderContentStyled>
-        </ContentsStyled>
+        </HeaderStyled>
         <ContentsStyled>
           <ContentStyledDiv>{children}</ContentStyledDiv>
         </ContentsStyled>
+        <FooterContainer>
+          <FooterContainerDiv>11</FooterContainerDiv>
+        </FooterContainer>
       </Layout>
     </>
   );
