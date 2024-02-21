@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeaderContainer = styled.header`
   position: fixed;
-  height: 60px;
+  height: 100px;
   width: 100%;
   top: 0;
   left: 0;
