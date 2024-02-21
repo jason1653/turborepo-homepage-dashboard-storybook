@@ -12,6 +12,8 @@ export interface HomeLayoutProps {
 const HeaderStyled = styled(Header)`
   text-align: center;
   background: #000;
+  padding: 20px 0;
+  height: initial;
 `;
 
 const HeaderContentStyled = styled.div`
@@ -54,10 +56,12 @@ const ContentsStyled = styled(Content)`
 const ContentStyledDiv = styled.div`
   margin: 0 auto;
   max-width: ${maxWidth}px;
-  padding: 20px 0;
+  padding: 40px 0;
 `;
 
-const FooterContainer = styled(Footer)``;
+const FooterContainer = styled(Footer)`
+  background-color: #000;
+`;
 
 const FooterContainerDiv = styled.div`
   max-width: ${maxWidth}px;
@@ -85,6 +89,7 @@ const items: MenuProps["items"] = [
 ];
 
 import logo from "../assets/logo.png";
+import logoFooter from "../assets/logo_footer.png";
 
 export const HomeLayout = (props: HomeLayoutProps) => {
   const { children } = props;
@@ -112,7 +117,13 @@ export const HomeLayout = (props: HomeLayoutProps) => {
           <ContentStyledDiv>{children}</ContentStyledDiv>
         </ContentsStyled>
         <FooterContainer>
-          <FooterContainerDiv>11</FooterContainerDiv>
+          <FooterContainerDiv>
+            <Row>
+              <Col span={12}>
+                <img src={logoFooter} />
+              </Col>
+            </Row>
+          </FooterContainerDiv>
         </FooterContainer>
       </Layout>
     </>
