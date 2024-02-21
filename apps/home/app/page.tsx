@@ -10,7 +10,7 @@ const Section = styled.section`
 `;
 
 const SectionInner = styled.div`
-  padding-top: 100px;
+  padding-top: 80px;
   position: relative;
 `;
 
@@ -21,7 +21,7 @@ const SectionTxt = styled.p`
 `;
 
 const SectionSubTxt = styled.p`
-  margin-top: 90px;
+  margin-top: 110px;
   font-size: 28px;
   font-weight: 600;
   line-height: 50px;
