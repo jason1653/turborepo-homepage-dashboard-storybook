@@ -7,14 +7,22 @@ import styled from "styled-components";
 const HeaderContainer = styled.header`
   position: fixed;
   height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 const HeaderContent = styled.div`
   display: flex;
+  align-items: center;
+  height: 100%;
 `;
 
 const HeaderLogo = styled.div`
   flex-basis: 40%;
+  display: flex;
+  align-items: center;
   @media (max-width: 768px) {
     img {
       width: 80px;
@@ -25,14 +33,14 @@ const HeaderLogo = styled.div`
 
 const HeaderMenu = styled.div`
   flex-basis: 60%;
-  height: 40px;
   text-align: right;
+  justify-content: flex-end;
 `;
 
 const Nav = styled.div`
   display: flex;
   justify-content: flex-end;
-  align-items: "flex-end";
+  align-items: center;
 `;
 
 const NavItem = styled.a`
@@ -42,6 +50,22 @@ const NavItem = styled.a`
   color: #fff;
   text-decoration: none;
   padding: 0 15px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+`;
+
+const MobileMenuIcon = styled(Image)`
+  display: none;
+  text-align: right;
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const Header = () => {
@@ -62,6 +86,13 @@ const Header = () => {
             <NavItem>About Us</NavItem>
             <NavItem>Service</NavItem>
             <NavItem>Contact</NavItem>
+
+            <MobileMenuIcon
+              src={"/btn_menu.png"}
+              width={30}
+              height={30}
+              alt={"메뉴"}
+            />
           </Nav>
         </HeaderMenu>
       </HeaderContent>
