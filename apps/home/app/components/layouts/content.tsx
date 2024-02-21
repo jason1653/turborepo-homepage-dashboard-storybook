@@ -3,7 +3,9 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-const MainContainer = styled.main``;
+const MainContainer = styled.main`
+  padding-top: 100px;
+`;
 
 const MainContent = styled.div``;
 
