@@ -84,6 +84,8 @@ const items: MenuProps["items"] = [
   },
 ];
 
+import logo from "../assets/logo.png";
+
 export const HomeLayout = (props: HomeLayoutProps) => {
   const { children } = props;
   return (
@@ -92,7 +94,9 @@ export const HomeLayout = (props: HomeLayoutProps) => {
         <HeaderStyled>
           <HeaderContentStyled>
             <Row>
-              <LogoStyled span={12}>Logo</LogoStyled>
+              <LogoStyled span={12}>
+                <img src={logo} />
+              </LogoStyled>
               <MenuStyled span={12}>
                 <MenuContainer>
                   <MenuItemsStyled
