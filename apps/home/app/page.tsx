@@ -163,6 +163,81 @@ const O2OImg2 = styled(Image)`
   }
 `;
 
+const O2OAdSection = styled.section`
+  position: relative;
+`;
+
+const O2OAdInner = styled.div`
+  :before {
+    //background: url("/bg_sec02.png") no-repeat top right;
+    //background-size: contain;
+    content: "";
+    position: absolute;
+    top: -300px;
+    right: -100px;
+    width: calc(100% - 150px);
+    height: 1000px;
+    background: url(/bg_sec02.png) no-repeat top right;
+    -webkit-background-size: contain;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  @media (min-width: 769px) and (max-width: 1100px) {
+    :before {
+      top: -200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    :before {
+      top: -120px;
+      right: 0;
+    }
+  }
+`;
+
+const O2OAdTitle = styled.h2`
+  font-size: 64px;
+  line-height: 80px;
+  margin-top: 200px;
+
+  strong {
+    color: #c7da01;
+    font-weight: 900;
+  }
+
+  @media (min-width: 769px) and (max-width: 1100px) {
+    font-size: 48px;
+    line-height: 60px;
+    margin-top: 150px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 100px;
+  }
+`;
+
+const O2OAdSubTxt = styled.p`
+  margin-top: 100px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 60px;
+
+  @media (min-width: 769px) and (max-width: 1100px) {
+    font-size: 28px;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    font-size: 24px;
+  }
+  padding-bottom: 500px;
+`;
+
 export default function Page(): JSX.Element {
   useEffect(() => {
     document.body.style.background = "#000";
@@ -225,6 +300,16 @@ export default function Page(): JSX.Element {
           ></O2OImg2>
         </O2OImgInner>
       </O2OSection>
+      <O2OAdSection>
+        <O2OAdInner>
+          <O2OAdTitle>
+            <strong>O2O AD</strong>
+            <br />
+            광고 성과, <strong>DB</strong>로 판단하다
+          </O2OAdTitle>
+          <O2OAdSubTxt>퍼미션 스킬을 통해 DB 품질 UP</O2OAdSubTxt>
+        </O2OAdInner>
+      </O2OAdSection>
     </>
   );
 }
