@@ -20,6 +20,11 @@ pnpm run dev --filter home
 ```
 
 
+### ui storybook - sample
+![screencapture-localhost-6006-2024-02-22-12_39_16.png](screencapture%2Fscreencapture-localhost-6006-2024-02-22-12_39_16.png)
+![screencapture-localhost-6006-2024-02-22-12_39_27.png](screencapture%2Fscreencapture-localhost-6006-2024-02-22-12_39_27.png)
+
+
 ### ui storybook 구동
 ```bash
 cd packages/ui
