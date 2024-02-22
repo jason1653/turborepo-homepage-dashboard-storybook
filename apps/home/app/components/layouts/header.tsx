@@ -14,6 +14,9 @@ const HeaderContainer = styled.header`
   right: 0;
   z-index: 999999;
   background-color: #000;
+  @media (max-width: 768px) {
+    height: 60px;
+  }
 `;
 
 const HeaderContent = styled.div`
