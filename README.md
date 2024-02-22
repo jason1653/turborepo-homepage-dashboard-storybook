@@ -1,4 +1,4 @@
-# Turborepo Ant Design 
+# turerepo - website / dashboard / storybook
 
 AntDesign을 활용한 AdminDashboard 및 홈페이지 공용컴포넌트 스터디
 
@@ -8,6 +8,16 @@ pnpm run dev --filter docs
 ```
 
 
+### home 디렉토리 webSite - sample
+![screencapture-localhost-3001-2024-02-22-12_34_00.png](screencapture%2Fscreencapture-localhost-3001-2024-02-22-12_34_00.png)
+![screencapture-localhost-3001-2024-02-22-12_34_30.png](screencapture%2Fscreencapture-localhost-3001-2024-02-22-12_34_30.png)
+![screencapture-localhost-3001-about-2024-02-22-12_34_54.png](screencapture%2Fscreencapture-localhost-3001-about-2024-02-22-12_34_54.png)
+![screencapture-localhost-3001-about-2024-02-22-12_35_11.png](screencapture%2Fscreencapture-localhost-3001-about-2024-02-22-12_35_11.png)
+
+### home 디렉토리 webSite 구동
+```bash
+pnpm run dev --filter home
+```
 
 
 ### ui storybook 구동
