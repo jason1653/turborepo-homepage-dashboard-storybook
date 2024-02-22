@@ -4,7 +4,8 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 const MainContainer = styled.main`
-  padding-top: 120px;
+  padding-top: 180px;
+  padding-bottom: 120px;
 `;
 
 const MainContent = styled.div``;

@@ -5,8 +5,8 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  padding-top: 200px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   background-color: #000;
 `;
